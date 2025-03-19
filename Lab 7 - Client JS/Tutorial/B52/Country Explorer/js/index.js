@@ -48,38 +48,38 @@ function populateCountryDropDown(countries) {
 
 }
 
-async function handleCountryChange(e) {
-    const url = `${countryEndPoint}${countryDD.value}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    factsArea.innerHTML = convertCountryToHTML(data[0]);
-}
+    async function handleCountryChange(e) {
+        const url = `${countryEndPoint}${countryDD.value}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        factsArea.innerHTML = convertCountryToHTML(data[0]);
+    }
 
-function convertCountryToHTML(country) {
-    const currencies = Object.values(country.currencies).map(currency => currency.name).join(", ");
-    const languages = Object.values(country.languages).join(", ");
+    function convertCountryToHTML(country) {
+        const currencies = Object.values(country.currencies).map(currency => currency.name).join(", ");
+        const languages = Object.values(country.languages).join(", ");
 
-    return `
-        <h1> ${country.name.common}</h1> <br>
-        <img src="${country.flags.png}" alt="${country.flags.alt}" width="100" height="100">
+        return `
+            <h1> ${country.name.common}</h1> <br>
+            <img src="${country.flags.png}" alt="${country.flags.alt}" width="100" height="100">
 
-        <table>
-            <tr>
-                <th>Official Name</th>
-                <td> ${country.name.official}</td>
-            </tr>
-            <tr>
-                <th>Population</th>
-                <td> ${country.population}</td>
-            </tr>
-            <tr>
-                <th>Currencies</th>
-                <td> ${currencies}</td>
-            </tr>
-            <tr>
-                <th>Languages</th>
-                <td> ${languages}</td>
-            </tr>
-        </table>
-        `
-}
+            <table>
+                <tr>
+                    <th>Official Name</th>
+                    <td> ${country.name.official}</td>
+                </tr>
+                <tr>
+                    <th>Population</th>
+                    <td> ${country.population}</td>
+                </tr>
+                <tr>
+                    <th>Currencies</th>
+                    <td> ${currencies}</td>
+                </tr>
+                <tr>
+                    <th>Languages</th>
+                    <td> ${languages}</td>
+                </tr>
+            </table>
+            `
+    }
