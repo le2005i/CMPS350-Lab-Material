@@ -1,18 +1,19 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function NavBar() {
     return (
         <nav>
-            <ul class="navbar-nav">
+            <ul className="navbar-nav">
                 <li>Alpha Bank</li>
                 <li>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                 </li>
                 <li >
-                    <a href="/accounts/upsert">Add Account</a>
+                    <Link href="/accounts/upsert">Add Account</Link>
                 </li>
                 <li>
-                    <a href="/accounts/trans/add">Add Transaction</a>
+                    <Link href="/accounts/trans/add">Add Transaction</Link>
                 </li>
             </ul>
         </nav >
