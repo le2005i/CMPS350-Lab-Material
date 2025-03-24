@@ -42,6 +42,7 @@ export default function AccountsTable({ initialAccounts }) {
             <table id="accounts">
                 <thead>
                     <tr>
+                        <th>Profile Pic</th>
                         <th>Account No</th>
                         <th>Account Type</th>
                         <th>Balance</th>
