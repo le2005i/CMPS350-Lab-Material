@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 
 export const metadata = {
@@ -15,9 +16,9 @@ export default function RootLayout({ children }) {
         <nav>
           <ul className="navbar-nav">
             <li>Alpha Bank</li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/accounts/upsert">Add Account</a></li>
-            <li><a href="/accounts/trans">Add Transaction</a> </li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/accounts/upsert">Add Account</Link></li>
+            <li><Link href="/accounts/trans">Add Transaction</Link> </li>
           </ul>
         </nav>
         {children}
