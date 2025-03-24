@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import AccountsTable from './components/AccountsTable'
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Home() {
   // we will fetch the data here
   const accounts = [
@@ -19,7 +20,7 @@ export default function Home() {
   // const accounts = 
   return (
     <>
-      <h1>Accounts</h1>
+      <h1 >Accounts</h1>
       <AccountsTable
         initialAccounts={accounts}
         x={1}

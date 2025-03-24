@@ -1,3 +1,7 @@
+.redLine {
+  color: red;
+}
+
 /* Form styling */
 .form {
   display: grid;
