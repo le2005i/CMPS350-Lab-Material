@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AccountRow({ acct }) {
+export default function AccountRow({ acct, onDeleteAccount }) {
     return (
         <tr id={"row-" + acct.accountNo}>
             <td><img
@@ -18,7 +18,7 @@ export default function AccountRow({ acct }) {
             <td>{acct.dateOpened}</td>
             <td>
                 {acct.balance >= 0 ?
-                    <button onclick="handleDeleteAccount('{acct.accountNo}')" className="btn-delete">
+                    <button onClick={e => onDeleteAccount(acct.accountNo)} className="btn-delete">
                         <i className="fas fa-trash">Delete</i>
                     </button> : ''}
                 <button onclick="handleEditAccount('{acct.accountNo}')" className="btn-edit">
