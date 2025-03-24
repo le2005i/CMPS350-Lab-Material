@@ -1,5 +1,6 @@
-import Link from 'next/link'
+
 import './globals.css'
+import NavBar from './components/NavBar'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,16 +14,9 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
       </head>
       <body>
-        <nav>
-          <ul className="navbar-nav">
-            <li>Alpha Bank</li>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/accounts/upsert">Add Account</Link></li>
-            <li><Link href="/accounts/trans">Add Transaction</Link> </li>
-          </ul>
-        </nav>
+        <NavBar />
         {children}
-        <h1>This is the bottom part that is common</h1>
+
       </body>
     </html >
   )
