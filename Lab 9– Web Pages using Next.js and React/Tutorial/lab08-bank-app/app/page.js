@@ -8,7 +8,9 @@ export default async function Home() {
   // we will get the data
   // const accounts = 
   return (
-    <><h1>Welcome to React/Next Pages</h1></>
+    <>
+      <h1>Welcome to React/Next Pages</h1>
+    </>
   )
 }
 

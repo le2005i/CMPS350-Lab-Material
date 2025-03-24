@@ -12,8 +12,17 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
       </head>
       <body>
+        <nav>
+          <ul className="navbar-nav">
+            <li>Alpha Bank</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/accounts/upsert">Add Account</a></li>
+            <li><a href="/accounts/trans">Add Transaction</a> </li>
+          </ul>
+        </nav>
         {children}
+        <h1>This is the bottom part that is common</h1>
       </body>
-    </html>
+    </html >
   )
 }
