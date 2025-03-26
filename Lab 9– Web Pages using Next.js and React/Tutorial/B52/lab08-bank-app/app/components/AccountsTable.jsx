@@ -15,18 +15,18 @@ export default function AccountsTable({ initialAccounts }) {
                 <th>Date Opened</th>
                 <th>Action</th>
             </tr>
-            {accounts.map(account => <tr id="row-${acct.accountNo}">
-                <td><img src="${acct.profileImage}" alt="Profile Image" class="profile-pic" /></td>
-                <td>${acct.firstname}</td>
-                <td>${acct.lastname}</td>
-                <td>${acct.gender}</td>
-                <td>${acct.accountNo}</td>
-                <td>${acct.acctType}</td>
-                <td>${acct.balance} QR</td>
-                <td>${acct.email}</td>
-                <td>${acct.dateOpened}</td>
+            {initialAccounts.map(acct => <tr id={'row-' + acct.accountNo}>
+                <td><img src={acct.profileImage} alt="Profile Image" class="profile-pic" /></td>
+                <td>{acct.firstname}</td>
+                <td>{acct.lastname}</td>
+                <td>{acct.gender}</td>
+                <td>{acct.accountNo}</td>
+                <td>{acct.acctType}</td>
+                <td>{acct.balance} QR</td>
+                <td>{acct.email}</td>
+                <td>{acct.dateOpened}</td>
                 <td>
-                    ${acct.balance >= 0 ?
+                    {acct.balance >= 0 ?
                         <button onclick="handleDeleteAccount('${acct.accountNo}')" class="btn-delete">
                             <i class="fas fa-trash">Delete</i>
                         </button> : ''}
